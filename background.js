@@ -1,8 +1,8 @@
 $pdk.controller.addEventListener("OnReleasePreview", function(payload) {
-    setBackgroundImage(payload.data.defaultThumbnailUrl);
+    setBackgroundImage(payload.data.url);
 });
 
-function setBackgroundImage(backgroundUrl) {
-    document.getElementsByClassName("tpVideo")[0].style.backgroundImage = "url(" + backgroundUrl + ")";
+function setBackgroundImage(videoUrl) {
+    document.getElementsByClassName("tpVideo")[0].style.backgroundImage = "url(" + videoUrl + "?assetTypes=Poster)";
     document.getElementsByClassName("tpVideo")[0].style.backgroundSize = "cover";
 }
